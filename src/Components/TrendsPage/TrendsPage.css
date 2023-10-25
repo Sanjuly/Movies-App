@@ -1,0 +1,36 @@
+.trendingPreview-container {
+    width: 90%;
+    margin: 0 auto;
+}
+.trendingPreview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.trendingPreview-title {
+    font-size: 30px;
+}
+.trendingPreview-btn {
+    width: 150px;
+    margin-top: 25px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 18px;
+    color: brown;
+    background-color: yellow;
+    cursor: pointer;
+}
+.trendingPreview-btn:hover {
+    color: yellow;
+    background-color: #cb7169;
+}
+.movie-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 20px;
+    overflow-x: scroll;
+
+}

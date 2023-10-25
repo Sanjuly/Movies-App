@@ -1,7 +1,31 @@
 import React from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
+import { categorydata }  from '../CategoriesPage/categorydata'
 
 function MovieDetailsPage() {
-  return (
+    const { slug } = useParams()
+    const navigate = useNavigate()
+
+    const category = categorydata.find(movie => movie.slug === slug)
+
+    const returnToCategory = () => {
+        window.history.back();
+        navigate('/category')
+
+    }
+
+    return (
+        <>
+            <p>{category?.title}</p>
+            <button onClick={() => returnToCategory()}>Return to Category</button>
+            <p>{category?.description}</p>
+            <p>{category?.author}</p>        
+        
+        </>
+    )
+
+  // eslint-disable-next-line no-lone-blocks, no-unreachable
+  {/*return (
     <>
     <section id="genericList" className="genericList-container inactive">
         <div className="movie-container">
@@ -32,7 +56,7 @@ function MovieDetailsPage() {
         </p>
     </section>
     </>
-    )
+  )*/}
     }
     
 

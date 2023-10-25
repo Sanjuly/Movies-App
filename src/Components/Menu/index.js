@@ -1,17 +1,17 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import './Menu.css'
 
 function Menu() {
     return (
-        <nav>
-            <ul>
+        <nav className='nav-container'>
+            <ul className='nav-container-list'>
                 {routes.map(route => (
-                    <li> 
+                    <li key={route.to}> 
                         <NavLink
-                            key={route.to}
                             to={route.to}
                             style={({isActive}) => ({
-                            color: isActive ? 'red' : 'blue',})}>
+                            color: isActive ? 'yellow' : '#cb7169',})}>
                             {route.text}
                         </NavLink>
                     </li>
@@ -27,6 +27,10 @@ routes.push({
     text: 'Home'
 })
 routes.push({
+    to: '/trends',
+    text: 'Trends'
+})
+routes.push({
     to: '/category',
     text: 'Category'
 })
@@ -38,9 +42,4 @@ routes.push({
     to: '/search',
     text: 'Search'
 })
-routes.push({
-    to: '/trends',
-    text: 'Trends'
-})
-
 export { Menu }

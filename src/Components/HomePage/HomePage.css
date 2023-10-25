@@ -1,7 +1,23 @@
-.contain-home {
+.home-page {
+    width: 90%;
+    margin: 0 auto;
+}
+.home-page--img {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    color: red;
-
+    margin-bottom: 50px;
+    gap: 20px;
+    overflow-x: scroll;
+}
+h1 {
+    text-align: center;
+}
+p:hover{
+    color: yellow;
+}
+img {
+    height: 200px;
+    object-fit: contain;
 }
