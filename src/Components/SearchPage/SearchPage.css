@@ -1,0 +1,17 @@
+.search {
+    width: 90%;
+    height: 75vh;
+    margin: 0 auto;
+}
+input {
+    width: 100%;
+    padding: 14px;
+    margin-top: 30px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    color: #170000;
+    background-color: #cb7169;
+}
+

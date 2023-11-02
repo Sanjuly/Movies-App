@@ -1,29 +1,49 @@
 import React from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { categorydata }  from '../CategoriesPage/categorydata'
+import './MovieDetailsPage.css'
 
 function MovieDetailsPage() {
     const { slug } = useParams()
     const navigate = useNavigate()
 
     const category = categorydata.find(movie => movie.slug === slug)
-
+    
     const returnToCategory = () => {
-        window.history.back();
         navigate('/category')
-
     }
 
-    return (
-        <>
-            <p>{category?.title}</p>
-            <button onClick={() => returnToCategory()}>Return to Category</button>
-            <p>{category?.description}</p>
-            <p>{category?.author}</p>        
+    const renderView = () => {
+    if (category) {
+        return (
+            <div className='container-details'>
+                    <div className='container-details--title'>
+                        <h1>{category?.title}</h1>
+                        <button onClick={() => returnToCategory()}>Return to Category</button>
+                    </div>
+                    <div className='container-details--img'>
+                        <img className='img-details' src={category?.img} alt='imag' />
+                            <div className='text-details'>
+                                <p className='text-details-p'>{category?.description}</p>
+                                <p className='text-details-p'>{category?.author}</p>
+                            </div>
+                    </div>
+                </div>
+        )
+    } else {
+        return (
+        <h2>No such movie found!</h2>
+        )
+    }}
+        return (
+            <>
+                <div className='container-details'>
+                    {renderView()}
+                </div>
+            </>
+        )
+    }
         
-        </>
-    )
-
   // eslint-disable-next-line no-lone-blocks, no-unreachable
   {/*return (
     <>
@@ -56,8 +76,8 @@ function MovieDetailsPage() {
         </p>
     </section>
     </>
-  )*/}
-    }
-    
+  )*/
 
-export {MovieDetailsPage}
+}
+
+export { MovieDetailsPage }

@@ -1,0 +1,27 @@
+.category-card {
+    width: 90%;
+    margin: 0 auto;
+}
+.category-card--movie { 
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+.category-card--title a {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #cb7169;    
+}
+.category-card--title a:hover {
+    color: yellow;
+}
+.category-card--img {
+    width: 280px;
+    padding-bottom: 20px;
+    cursor: pointer;
+}

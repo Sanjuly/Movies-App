@@ -1,11 +1,13 @@
 import React from 'react'
+import './SearchPage.css'
 
 function SearchPage() {
     return (
-        <form id="searchForm" className="header-searchForm">
-            <input type="text" placeholder="Search" />
-            <button id="searchBtn" type="button">🔍</button>
-        </form>
+        <div className='search'>
+            <form id='searchForm' className='search-searchForm'>
+                <input type='text' placeholder='Search' />
+            </form>
+        </div>
     )
 }
 

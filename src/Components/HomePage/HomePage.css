@@ -10,14 +10,19 @@
     margin-bottom: 50px;
     gap: 20px;
     overflow-x: scroll;
+    cursor: pointer;
 }
 h1 {
     text-align: center;
+    margin-bottom: 0;
 }
 p:hover{
+    padding-top: 10px;
+    font-size: 30px;
     color: yellow;
+    cursor: pointer;
 }
-img {
-    height: 200px;
+.home-page-img-image {
+    height: 350px;
     object-fit: contain;
 }

@@ -28,7 +28,7 @@ routes.push({
 })
 routes.push({
     to: '/trends',
-    text: 'Trends'
+    text: 'Trending'
 })
 routes.push({
     to: '/category',
@@ -36,7 +36,7 @@ routes.push({
 })
 routes.push({
     to: '/details',
-    text: 'Movie Details'
+    text: 'Movie Detail'
 })
 routes.push({
     to: '/search',
